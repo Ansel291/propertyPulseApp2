@@ -48,6 +48,7 @@ async function updateProperty(propertyId, formData) {
       email: formData.get('seller_info.email'),
       phone: formData.get('seller_info.phone'),
     },
+    images: formData.getAll('images'),
   }
 
   const updatedProperty = await Property.findByIdAndUpdate(

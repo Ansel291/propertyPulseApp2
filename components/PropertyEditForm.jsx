@@ -2,6 +2,7 @@ import updateProperty from '@/app/actions/updateProperty'
 
 const PropertyEditForm = ({ property }) => {
   const updatePropertyById = updateProperty.bind(null, property._id)
+  console.log(property.images)
 
   return (
     <form action={updatePropertyById}>

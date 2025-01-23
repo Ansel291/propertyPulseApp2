@@ -14,7 +14,6 @@ const PropertyPage = async ({ params }) => {
   await connectDB()
 
   const { id } = await params
-  console.log(id)
 
   const propertyDoc = await Property.findById(id).lean()
   const property = convertToSerializableObject(propertyDoc)
